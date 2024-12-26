@@ -40,8 +40,12 @@ public class UpdateData {
 			// Step 3:- Prepared Statement
 			Statement statement = connection.createStatement();
 
-			String Update = "update employee_detail set('" + emp_name + "','" + emp_job + "'," + emp_salary
-					+ " where employee_id=" + emp_id + ")";
+//			String Update = "update employee_detail set('" + emp_name + "','" + emp_job + "'," + emp_salary
+//					+ " where employee_id=" + emp_id + ")";
+
+			String Update = "UPDATE employee_detail SET employee_name='" + emp_name + "', employee_job='" + emp_job
+					+ "', employee_salary=" + emp_salary + " WHERE employee_id=" + emp_id;
+
 			// Step 4:- Execute Query
 			statement.execute(Update);
 			System.out.println("Data updated Successfuly...");
