@@ -53,7 +53,6 @@ public class UpdateData {
 			} else {
 				System.out.println("Id Not Found");
 			}
-
 			// Step 4:- Execute Query
 
 			statement.close();
