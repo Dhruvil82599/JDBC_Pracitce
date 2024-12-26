@@ -39,16 +39,17 @@ public class InsertData {
 			preparedStatement.setString(2, emp_name);
 			preparedStatement.setString(3, emp_job);
 			preparedStatement.setLong(4, emp_salary);
-			
+
 			int i = preparedStatement.executeUpdate(Insert);
-			preparedStatement.close();
-			connection.close();
 
 			if (i > 0) {
 				System.out.println("Data Inserted Successfully...");
 			} else {
 				System.out.println("Data Not Inserted");
 			}
+
+			preparedStatement.close();
+			connection.close();
 
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
