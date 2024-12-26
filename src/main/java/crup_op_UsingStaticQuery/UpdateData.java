@@ -32,7 +32,7 @@ public class UpdateData {
 			String select = "select * from employee_detail";
 			PreparedStatement preparedStatement = connection.prepareStatement(select);
 			ResultSet resultSet = preparedStatement.executeQuery();
-
+			
 			if (resultSet.next()) {
 
 				String select_Id = "select employee_id from employee_detail";
