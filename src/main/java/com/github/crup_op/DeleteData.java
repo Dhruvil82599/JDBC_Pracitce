@@ -32,7 +32,7 @@ public class DeleteData {
 			if (resultSet.next()) {
 				String delete = "delete from employee_detail where employee_id=" + emp_id;
 				statement.execute(delete);
-				System.err.println("Data Deleted Successfully...");
+				System.out.println("Data Deleted Successfully...");
 			} else {
 				System.out.println("Id Not Found");
 			}
