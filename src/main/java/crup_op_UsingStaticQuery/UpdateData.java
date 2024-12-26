@@ -44,15 +44,17 @@ public class UpdateData {
 			String select = "select * from employee_detail";
 			PreparedStatement preparedStatement = connection.prepareStatement(select);
 			ResultSet resultSet = preparedStatement.executeQuery();
-			
-			
 
-			String Update = "UPDATE employee_detail SET employee_name='" + emp_name + "', employee_job='" + emp_job
-					+ "', employee_salary=" + emp_salary + " WHERE employee_id=" + emp_id;
+			if (resultSet.next()) {
+				String Update = "UPDATE employee_detail SET employee_name='" + emp_name + "', employee_job='" + emp_job
+						+ "', employee_salary=" + emp_salary + " WHERE employee_id=" + emp_id;
+				statement.execute(Update);
+				System.out.println("Data updated Successfuly...");
+			} else {
+				System.out.println("Id Not Found");
+			}
 
 			// Step 4:- Execute Query
-			statement.execute(Update);
-			System.out.println("Data updated Successfuly...");
 
 			statement.close();
 			connection.close();
