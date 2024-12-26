@@ -28,17 +28,19 @@ public class ReadData {
 			ResultSet resultSet = preparedStatement.executeQuery();
 
 			if (resultSet.next()) {
+				System.out.println("employee_id   employee_name   employee_job   employee_salary");
+
 				while (resultSet.next()) {
 					int employee_id = resultSet.getInt(1);
 					String employee_name = resultSet.getString(2);
 					String employee_job = resultSet.getString(3);
 					long employee_salary = resultSet.getLong(4);
 
-					System.out.println(
-							employee_id + "\t\t" + employee_name + "\t\t" + employee_job + "\t\t" + employee_salary);
+					System.out.println(employee_id + " \t | \t" + employee_name + " \t | \t" + employee_job + " \t | \t"
+							+ employee_salary);
 				}
 			} else {
-				System.out.print("Data Not Found in Database table");
+				System.out.println("Data Not Available");
 			}
 
 		} catch (ClassNotFoundException e) {
