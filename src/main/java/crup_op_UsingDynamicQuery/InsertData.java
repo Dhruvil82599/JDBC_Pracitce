@@ -33,7 +33,7 @@ public class InsertData {
 			System.out.print("Enter Employee Salary:- ");
 			long emp_salary = sc.nextInt();
 
-			String Insert = "insert into employee_detail values (?,?,?,?)";
+			String Insert = "insert into employee_detail values(?,?,?,?)";
 
 			preparedStatement.setInt(1, emp_id);
 			preparedStatement.setString(2, emp_name);
