@@ -10,7 +10,7 @@ public class InsertData {
 	public static void main(String[] args) {
 		System.out.println("Insert Data Using Scanner Class");
 
-//		String url = "jdbc:postgresql://localhost:5432/employee_demo?user=postgres&password=root";
+		String url = "jdbc:postgresql://localhost:5432/employee_demo?user=postgres&password=root";
 
 		try {
 			Class.forName("org.postgresql.Driver");
